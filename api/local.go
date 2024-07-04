@@ -9,8 +9,6 @@ import (
 	"github.com/labstack/echo/v4"
 )
 
-package handler
-
 var srv *echo.Echo
 
 func init() {
