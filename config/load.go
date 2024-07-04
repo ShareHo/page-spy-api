@@ -9,11 +9,6 @@ import (
 	// "github.com/labstack/gommon/log"
 )
 
-const ConfigFileName = "config.json"
-
-//go:embed defaultConfig.json
-var DefaultConfigJsonByte []byte
-
 func LoadConfig() (*Config, error) {
 	// err := checkLocalConfigFile()
 	// if err != nil {
