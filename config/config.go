@@ -1,9 +1,5 @@
 package config
 
-import (
-	"io/fs"
-)
-
 type CorsConfig struct {
 	AllowOrigins  []string `json:"allowOrigins"`
 	AllowMethods  []string `json:"allowMethods"`

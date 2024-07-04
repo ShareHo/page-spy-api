@@ -8,18 +8,7 @@ import (
 )
 
 func Run() {
-	err := container.Container().Invoke(func(e *echo.Echo, config *config.Config, staticConfig *config.StaticConfig) {
-		if staticConfig != nil {
-			hash := staticConfig.GitHash
-			version := staticConfig.Version
-			if hash == "" {
-				hash = "local"
-			}
-			if version == "" {
-				version = "local"
-			}
-			log.Infof("server info: %s@%s", version, hash)
-		}
+	err := container.Container().Invoke(func(e *echo.Echo, config *config.Config) {
 
 		for _, ip := range util.GetLocalIPList() {
 			log.Infof("LAN address http://%s:%s", ip, config.Port)

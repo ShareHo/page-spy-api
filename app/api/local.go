@@ -1,13 +1,11 @@
 package handler
 
 import (
-	"net/http"
 	"log"
+	"net/http"
 
-	// "github.com/HuolalaTech/page-spy-api/config"
 	"github.com/HuolalaTech/page-spy-api/container"
 	"github.com/labstack/echo/v4"
-	"github.com/HuolalaTech/page-spy-api/serve/route"
 )
 
 var srv *echo.Echo
@@ -51,7 +49,6 @@ func init() {
 	}
 }
 
-func Handler(w http.ResponseWriter,r *http.Request) {
-	srv.ServeHTTP(w,r)
- }
-
+func Handler(w http.ResponseWriter, r *http.Request) {
+	srv.ServeHTTP(w, r)
+}
