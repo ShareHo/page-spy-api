@@ -12,17 +12,17 @@ import (
 var srv *echo.Echo
 
 func init() {
-	container := container.Container()
-	err := container.Provide(func() *config.StaticConfig {
-		return nil
-	})
+	// container := container.Container()
+	// err := container.Provide(func() *config.StaticConfig {
+	// 	return nil
+	// })
 
-	if err != nil {
-		log.Fatal(err)
-	}
+	// if err != nil {
+	// 	log.Fatal(err)
+	// }
 	// serve.Run()
 
-	errR := container.Invoke(func(e *echo.Echo, config *config.Config, staticConfig *config.StaticConfig) {
+	errR := container.Container().Invoke(func(e *echo.Echo, config *config.Config, staticConfig *config.StaticConfig) {
 		// if staticConfig != nil {
 		// 	hash := staticConfig.GitHash
 		// 	version := staticConfig.Version
