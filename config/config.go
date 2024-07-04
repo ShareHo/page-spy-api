@@ -62,10 +62,3 @@ type Address struct {
 	Ip   string `json:"ip"`
 	Port string `json:"port"`
 }
-
-type StaticConfig struct {
-	DirName string
-	Files   fs.FS
-	GitHash string
-	Version string
-}
