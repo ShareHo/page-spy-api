@@ -3,7 +3,7 @@ package main
 import (
 	"log"
 
-	"github.com/ShareHo/page-spy-api/config"
+	"github.com/HuolalaTech/page-spy-api/config"
 	"github.com/HuolalaTech/page-spy-api/container"
 	"github.com/HuolalaTech/page-spy-api/serve"
 )

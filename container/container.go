@@ -3,7 +3,7 @@ package container
 import (
 	"log"
 
-	"github.com/ShareHo/page-spy-api/config"
+	"github.com/HuolalaTech/page-spy-api/config"
 	"github.com/HuolalaTech/page-spy-api/data"
 	"github.com/HuolalaTech/page-spy-api/proxy"
 	"github.com/HuolalaTech/page-spy-api/rpc"

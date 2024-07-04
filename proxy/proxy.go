@@ -5,7 +5,7 @@ import (
 	"net/http/httputil"
 	"net/url"
 
-	"github.com/ShareHo/page-spy-api/config"
+	"github.com/HuolalaTech/page-spy-api/config"
 	"github.com/HuolalaTech/page-spy-api/rpc"
 	"github.com/labstack/echo/v4"
 )
