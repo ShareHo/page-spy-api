@@ -3,8 +3,6 @@ package route
 import (
 	"fmt"
 	"io"
-	"io/fs"
-	"net/http"
 	"net/url"
 	"strconv"
 	"strings"
@@ -15,7 +13,6 @@ import (
 	"github.com/HuolalaTech/page-spy-api/serve/common"
 	selfMiddleware "github.com/HuolalaTech/page-spy-api/serve/middleware"
 	"github.com/HuolalaTech/page-spy-api/serve/socket"
-	"github.com/HuolalaTech/page-spy-api/static"
 	"github.com/HuolalaTech/page-spy-api/storage"
 	"github.com/labstack/echo/v4"
 )
@@ -45,7 +42,7 @@ func getTags(params url.Values) []*data.Tag {
 	return tags
 }
 
-func NewEcho(socket *socket.WebSocket, core *CoreApi, config *config.Config, proxyManager *proxy.ProxyManager, staticConfig *config.StaticConfig) *echo.Echo {
+func NewEcho(socket *socket.WebSocket, core *CoreApi, config *config.Config, proxyManager *proxy.ProxyManager) *echo.Echo {
 	e := echo.New()
 	e.Use(selfMiddleware.Logger())
 	e.Use(selfMiddleware.Error())
@@ -206,25 +203,6 @@ func NewEcho(socket *socket.WebSocket, core *CoreApi, config *config.Config, pro
 
 		return c.JSON(200, common.NewSuccessResponse(createFile))
 	})
-
-	if staticConfig != nil {
-		dist, err := fs.Sub(staticConfig.Files, "dist")
-		if err != nil {
-			panic(err)
-		}
-
-		ff := static.NewFallbackFS(
-			dist,
-			"index.html",
-		)
-
-		e.GET(
-			"/*",
-			echo.WrapHandler(
-				http.FileServer(http.FS(ff))),
-			selfMiddleware.Cache(),
-		)
-	}
 
 	return e
 }
