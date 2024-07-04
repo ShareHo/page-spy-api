@@ -7,6 +7,7 @@ import (
 	// "github.com/HuolalaTech/page-spy-api/config"
 	"github.com/HuolalaTech/page-spy-api/container"
 	"github.com/labstack/echo/v4"
+	"github.com/HuolalaTech/page-spy-api/serve/route"
 )
 
 var srv *echo.Echo
