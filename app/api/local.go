@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"log"
 
-	"github.com/HuolalaTech/page-spy-api/config"
+	// "github.com/HuolalaTech/page-spy-api/config"
 	"github.com/HuolalaTech/page-spy-api/container"
 	"github.com/labstack/echo/v4"
 )
@@ -22,7 +22,7 @@ func init() {
 	// }
 	// serve.Run()
 
-	errR := container.Container().Invoke(func(e *echo.Echo, config *config.Config, staticConfig *config.StaticConfig) {
+	errR := container.Container().Invoke(func(e *echo.Echo) {
 		// if staticConfig != nil {
 		// 	hash := staticConfig.GitHash
 		// 	version := staticConfig.Version
