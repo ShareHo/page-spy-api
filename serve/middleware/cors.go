@@ -1,7 +1,7 @@
 package middleware
 
 import (
-	"github.com/HuolalaTech/page-spy-api/config"
+	"github.com/ShareHo/page-spy-api/config"
 	echo "github.com/labstack/echo/v4"
 	"github.com/labstack/echo/v4/middleware"
 )

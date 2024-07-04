@@ -5,7 +5,7 @@ import (
 	"io"
 	"os"
 
-	"github.com/HuolalaTech/page-spy-api/config"
+	"github.com/ShareHo/page-spy-api/config"
 	"github.com/HuolalaTech/page-spy-api/data"
 )
 

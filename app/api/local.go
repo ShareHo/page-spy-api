@@ -4,7 +4,7 @@ import (
 	"net/http"
 	"log"
 
-	"github.com/HuolalaTech/page-spy-api/config"
+	"github.com/ShareHo/page-spy-api/config"
 	"github.com/HuolalaTech/page-spy-api/container"
 	"github.com/labstack/echo/v4"
 )

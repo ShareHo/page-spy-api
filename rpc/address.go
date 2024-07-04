@@ -9,7 +9,7 @@ import (
 	"time"
 
 	"github.com/HuolalaTech/page-spy-api/api/event"
-	"github.com/HuolalaTech/page-spy-api/config"
+	"github.com/ShareHo/page-spy-api/config"
 	"github.com/HuolalaTech/page-spy-api/util"
 	"github.com/google/uuid"
 )

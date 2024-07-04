@@ -7,7 +7,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/HuolalaTech/page-spy-api/config"
+	"github.com/ShareHo/page-spy-api/config"
 	selfLogger "github.com/HuolalaTech/page-spy-api/logger"
 	"github.com/HuolalaTech/page-spy-api/util"
 	"github.com/glebarez/sqlite"

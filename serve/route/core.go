@@ -10,7 +10,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/HuolalaTech/page-spy-api/config"
+	"github.com/ShareHo/page-spy-api/config"
 	"github.com/HuolalaTech/page-spy-api/data"
 	"github.com/HuolalaTech/page-spy-api/logger"
 	"github.com/HuolalaTech/page-spy-api/rpc"
